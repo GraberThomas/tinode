@@ -18,12 +18,9 @@ pipeline {
         }
 
         stage('Login to Docker Hub') {
-            steps {
-                script {
-                    withCredentials([string(credentialsId: DOCKER_HUB_CREDENTIALS, variable: 'DOCKER_PASSWORD')]) {
-                        sh "echo $DOCKER_PASSWORD | docker login -u mon-utilisateur --password-stdin"
-                    }
-                }
+           steps{
+               sh 'echo ${DOCKER_HUB_PSW} | docker login -u ${DOCKER_HUB_USR} --password-stdin'
+               sh "docker push openlab29/tinode"
             }
         }
 
