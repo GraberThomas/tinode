@@ -8,11 +8,6 @@ pipeline {
     }
 
     stages {
-        stage('Checkout Code') {
-            steps {
-                git 'https://github.com/jam29/tinode.git'  // Remplace avec ton repo
-            }
-        }
 
         stage('Build Docker Image') {
             steps {
