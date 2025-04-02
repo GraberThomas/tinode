@@ -4,7 +4,7 @@ pipeline {
     environment {
         IMAGE_NAME = 'openlab29/tinode'
         IMAGE_TAG = 'latest'
-        DOCKER_HUB_CREDENTIALS = 'dockercred' // ID des credentials dans Jenkins
+        DOCKER_HUB_CREDENTIALS = '76d51921-cdc2-4c18-8bdd-bb4b8c744f74' // ID des credentials dans Jenkins
     }
 
     stages {
